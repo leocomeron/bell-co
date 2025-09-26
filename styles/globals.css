@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 14px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.container-nice {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-brand-700 text-white font-medium shadow hover:bg-brand-800 transition;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-brand-700 text-brand-700 font-medium hover:bg-brand-50 transition;
+}
+
+.card {
+  @apply rounded-2xl shadow-sm border border-gray-100 bg-white;
+}
