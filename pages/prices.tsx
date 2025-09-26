@@ -20,7 +20,7 @@ export default function Prices() {
             <Link href="/">
               <Image
                 src={SITE.logo ?? "/logo1.png"}
-                alt={SITE.name}
+                alt="BELL&CO Estética y Pilates - Centro de belleza en Córdoba"
                 width={140}
                 height={36}
               />
@@ -47,10 +47,13 @@ export default function Prices() {
       <Section className="pt-10 md:pt-16">
         <div className="container-nice text-center">
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-            Lista de precios <span className="text-brand-600">BELL&CO</span>
+            Lista de Precios - Centro de Estética y Pilates{" "}
+            <span className="text-brand-600">BELL&CO</span>
           </h1>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            {SITE.description}
+            Precios actualizados de tratamientos faciales, estética corporal,
+            depilación definitiva, manicura, pedicura, uñas esculpidas y pilates
+            en Córdoba, Argentina.
           </p>
           <div className="mt-6 flex gap-3 justify-center">
             <a

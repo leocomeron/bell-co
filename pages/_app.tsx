@@ -3,6 +3,7 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import "@/../styles/globals.css";
 import { SITE } from "@/config/site";
+import StructuredData from "components/StructuredData";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -21,7 +22,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content={SITE.keywords} />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="es" />
+        <meta name="geo.region" content="AR-C" />
+        <meta name="geo.placename" content="Córdoba" />
+        <meta name="geo.position" content="-31.4201;-64.1888" />
+        <meta name="ICBM" content="-31.4201, -64.1888" />
       </Head>
+      <StructuredData />
       <Component {...pageProps} />
     </>
   );

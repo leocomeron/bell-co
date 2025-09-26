@@ -17,7 +17,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <Image
               src={SITE.logo ?? "/logo1.png"}
-              alt={SITE.name}
+              alt="BELL&CO Estética y Pilates - Centro de belleza en Córdoba"
               width={140}
               height={36}
             />
@@ -44,12 +44,14 @@ export default function Home() {
         <div className="container-nice grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Cuidamos tu piel y bienestar{" "}
-              <span className="text-brand-600">
-                con tratamientos profesionales
-              </span>
+              Centro de Estética y Pilates en Córdoba{" "}
+              <span className="text-brand-600">BELL&CO</span>
             </h1>
-            <p className="mt-4 text-gray-600 max-w-prose">{SITE.description}</p>
+            <p className="mt-4 text-gray-600 max-w-prose">
+              Especialistas en tratamientos faciales, estética corporal,
+              depilación definitiva, manicura, pedicura, uñas esculpidas y
+              pilates. Atención personalizada en Córdoba, Argentina.
+            </p>
             <div className="mt-6 flex gap-3">
               <a
                 className="btn-primary"
@@ -78,7 +80,11 @@ export default function Home() {
       </Section>
 
       {/* Servicios */}
-      <Section id="servicios" subtitle="Servicios" title="Tratamientos">
+      <Section
+        id="servicios"
+        subtitle="Nuestros Servicios"
+        title="Tratamientos de Estética y Pilates"
+      >
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TREATMENTS.map((t) => (
             <div key={t.id} className="h-full">
@@ -106,7 +112,11 @@ export default function Home() {
       </Section>
 
       {/* Contacto */}
-      <Section id="contacto" subtitle="Ubicación & Horarios" title="Contacto">
+      <Section
+        id="contacto"
+        subtitle="Ubicación & Horarios"
+        title="Contacto - Centro de Estética BELL&CO Córdoba"
+      >
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card p-6">
             <h3 className="text-lg font-semibold mb-2">Encontranos</h3>
