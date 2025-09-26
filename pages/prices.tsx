@@ -62,10 +62,10 @@ export default function Prices() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Consultar por WhatsApp
+              Consultar
             </a>
             <Link className="btn-outline" href="/">
-              Volver al inicio
+              Volver a inicio
             </Link>
           </div>
         </div>

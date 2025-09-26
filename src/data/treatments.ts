@@ -18,6 +18,23 @@ export type Treatment = {
 };
 
 export const TREATMENTS: Treatment[] = [
+  // Pilates
+  {
+    id: "pilates",
+    name: "Pilates",
+    category: "Pilates",
+    description: "Abono mensual de clases grupales.",
+  },
+
+  {
+    id: "depilacion-definitiva",
+    name: "Depilación Definitiva (Láser)",
+    category: "Depilación",
+    durationMin: 30,
+    description:
+      "Tecnología de última generación para una piel suave por más tiempo.",
+    fromPrice: 12000,
+  },
   {
     id: "limpieza-profunda",
     name: "Limpieza Facial Profunda",
@@ -74,15 +91,7 @@ export const TREATMENTS: Treatment[] = [
       "Estimulación de colágeno para firmeza y efecto lifting sin cirugía.",
     fromPrice: 25000,
   },
-  {
-    id: "depilacion-definitiva",
-    name: "Depilación Definitiva (Láser)",
-    category: "Depilación",
-    durationMin: 30,
-    description:
-      "Tecnología de última generación para una piel suave por más tiempo.",
-    fromPrice: 12000,
-  },
+
   {
     id: "masajes-relajantes",
     name: "Masajes Relajantes",
@@ -213,32 +222,6 @@ export const TREATMENTS: Treatment[] = [
     name: "Cuerpo completo hombres",
     category: "Definitiva",
     description: "Depilación integral pensada para varones.",
-  },
-
-  // Pilates
-  {
-    id: "pilates-4-clases",
-    name: "Pilates - 4 clases",
-    category: "Pilates",
-    description: "Abono mensual de 4 clases grupales.",
-  },
-  {
-    id: "pilates-8-clases",
-    name: "Pilates - 8 clases",
-    category: "Pilates",
-    description: "Abono mensual de 8 clases grupales.",
-  },
-  {
-    id: "pilates-12-clases",
-    name: "Pilates - 12 clases",
-    category: "Pilates",
-    description: "Abono mensual de 12 clases grupales.",
-  },
-  {
-    id: "pilates-20-clases",
-    name: "Pilates - 20 clases",
-    category: "Pilates",
-    description: "Paquete intensivo de 20 clases.",
   },
 
   // Cejas y Pestañas
