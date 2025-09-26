@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "components/Section";
 import WhatsAppFloating from "components/WhatsAppFloating";
+import Carousel from "components/Carousel";
 import { SITE } from "@/config/site";
 import { TREATMENTS } from "@/data/treatments";
 
@@ -9,6 +10,20 @@ export default function Home() {
   const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
     SITE.whatsappPrefill
   )}`;
+  const heroSlides = [
+    {
+      src: "/pilates.jpeg",
+      alt: "Pilates",
+    },
+    {
+      src: "/depilation.jpg",
+      alt: "Estética",
+    },
+    {
+      src: "/manicure.jpg",
+      alt: "Manicura",
+    },
+  ];
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
       {/* Header */}
@@ -69,13 +84,10 @@ export default function Home() {
               Tel: {SITE.phoneDisplay}
             </div>
           </div>
-          <div className="relative h-[320px] md:h-[420px]">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-rose-100 via-white to-rose-50 border border-rose-100 shadow-inner" />
-            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-2xl bg-rose-200/60 blur-2xl" />
-            <div className="absolute bottom-6 right-6 left-6 top-6 border border-white/60 rounded-2xl shadow-lg bg-white/80 backdrop-blur-sm flex items-center justify-center">
-              <span className="text-2xl text-brand-600">Estética</span>
-            </div>
-          </div>
+          <Carousel
+            slides={heroSlides}
+            className="relative h-[320px] md:h-[420px]"
+          />
         </div>
       </Section>
 
@@ -114,8 +126,8 @@ export default function Home() {
       {/* Contacto */}
       <Section
         id="contacto"
-        subtitle="Ubicación & Horarios"
-        title="Contacto - Centro de Estética BELL&CO Córdoba"
+        title="Ubicación & Horarios"
+        subtitle="Contacto - Centro de Estética BELL&CO Córdoba"
       >
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card p-6">
