@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import Section from "components/Section";
-import WhatsAppFloating from "components/WhatsAppFloating";
 import { SITE } from "@/config/site";
 import { PRICES } from "@/data/prices";
 import PriceTable from "components/PriceTable";
@@ -13,36 +11,6 @@ export default function Prices() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-gray-100">
-        <div className="container-nice flex items-center justify-between py-3">
-          <div className="flex items-center gap-2">
-            <Link href="/">
-              <Image
-                src={SITE.logo ?? "/logo1.png"}
-                alt="BELL&CO Estética y Pilates - Centro de belleza en Córdoba"
-                width={140}
-                height={36}
-              />
-            </Link>
-          </div>
-          <nav className="hidden md:flex gap-6 text-sm">
-            <Link href="/#servicios" className="hover:text-brand-600">
-              Tratamientos
-            </Link>
-            <Link href="/prices" className="hover:text-brand-600">
-              Precios
-            </Link>
-            <Link href="/#contacto" className="hover:text-brand-600">
-              Contacto
-            </Link>
-          </nav>
-          <a href={waHref} target="_blank" className="btn-primary">
-            WhatsApp
-          </a>
-        </div>
-      </header>
-
       {/* Hero */}
       <Section className="pt-10 md:pt-16">
         <div className="container-nice text-center">
@@ -81,33 +49,6 @@ export default function Prices() {
           </p>
         </div>
       </Section>
-
-      {/* Footer */}
-      <footer className="py-10 border-t border-gray-100 text-sm text-gray-500">
-        <div className="container-nice flex flex-col md:flex-row items-center justify-between gap-3">
-          <div>
-            © {new Date().getFullYear()} {SITE.name}. Todos los derechos
-            reservados.
-          </div>
-          <div className="flex items-center gap-4">
-            <Link className="hover:text-brand-600" href="/#servicios">
-              Tratamientos
-            </Link>
-            <Link className="hover:text-brand-600" href="/prices">
-              Precios
-            </Link>
-            <a
-              className="hover:text-brand-600"
-              href={SITE.mapsUrl}
-              target="_blank"
-            >
-              Ubicación
-            </a>
-          </div>
-        </div>
-      </footer>
-
-      <WhatsAppFloating />
     </main>
   );
 }

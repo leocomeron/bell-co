@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import Section from "components/Section";
-import WhatsAppFloating from "components/WhatsAppFloating";
 import { SITE } from "@/config/site";
 import { TREATMENTS } from "@/data/treatments";
-import Header from "components/Header";
 import Hero from "components/Hero";
 import Card from "components/Card";
-import Footer from "components/Footer";
 
 export default function Home() {
   const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
@@ -38,9 +35,6 @@ export default function Home() {
   const displayedTreatments = TREATMENTS.slice(0, visibleCount);
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
-      {/* Header */}
-      <Header waHref={waHref} />
-
       {/* Hero */}
       <Section className="pt-6 md:pt-16">
         <Hero waHref={waHref} />
@@ -108,11 +102,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      {/* Footer */}
-      <Footer />
-
-      <WhatsAppFloating />
     </main>
   );
 }
