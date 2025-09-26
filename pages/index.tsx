@@ -4,8 +4,6 @@ import Section from "components/Section";
 import WhatsAppFloating from "components/WhatsAppFloating";
 import { SITE } from "@/config/site";
 import { TREATMENTS } from "@/data/treatments";
-import { PRICES } from "@/data/prices";
-import PriceTable from "components/PriceTable";
 
 export default function Home() {
   const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
@@ -28,9 +26,9 @@ export default function Home() {
             <a href="#servicios" className="hover:text-brand-600">
               Tratamientos
             </a>
-            <a href="#precios" className="hover:text-brand-600">
+            <Link href="/prices" className="hover:text-brand-600">
               Precios
-            </a>
+            </Link>
             <a href="#contacto" className="hover:text-brand-600">
               Contacto
             </a>
@@ -61,9 +59,9 @@ export default function Home() {
               >
                 Consultar por WhatsApp
               </a>
-              <a className="btn-outline" href="#precios">
+              <Link className="btn-outline" href="/prices">
                 Ver precios
-              </a>
+              </Link>
             </div>
             <div className="mt-3 text-sm text-gray-500">
               Tel: {SITE.phoneDisplay}
@@ -107,21 +105,13 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Precios */}
-      <Section id="precios" subtitle="Transparencia" title="Lista de precios">
-        <PriceTable rows={PRICES} />
-        <p className="mt-3 text-sm text-gray-500">
-          Los valores son estimativos y pueden variar según evaluación. Consultá
-          combos y abonos por WhatsApp.
-        </p>
-      </Section>
-
       {/* Contacto */}
       <Section id="contacto" subtitle="Ubicación & Horarios" title="Contacto">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card p-6">
             <h3 className="text-lg font-semibold mb-2">Encontranos</h3>
             <p className="text-gray-600">{SITE.city}</p>
+            <p className="text-gray-600">{SITE.address}</p>
             <div className="mt-4 flex gap-3">
               <a className="btn-primary" href={waHref} target="_blank">
                 Escribir por WhatsApp
@@ -159,7 +149,7 @@ export default function Home() {
             <Link className="hover:text-brand-600" href="#servicios">
               Tratamientos
             </Link>
-            <Link className="hover:text-brand-600" href="#precios">
+            <Link className="hover:text-brand-600" href="/prices">
               Precios
             </Link>
             <a

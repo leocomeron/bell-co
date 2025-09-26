@@ -15,12 +15,20 @@ export default function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={clsx("py-16", className)}>
+    <section id={id} className={clsx("py-8", className)}>
       <div className="container-nice">
         {(title || subtitle) && (
           <header className="mb-10 text-center">
-            {subtitle && <p className="text-sm uppercase tracking-wide text-brand-600">{subtitle}</p>}
-            {title && <h2 className="mt-2 text-3xl md:text-4xl font-semibold">{title}</h2>}
+            {subtitle && (
+              <p className="text-sm uppercase tracking-wide text-brand-600">
+                {subtitle}
+              </p>
+            )}
+            {title && (
+              <h2 className="mt-2 text-3xl md:text-4xl font-semibold">
+                {title}
+              </h2>
+            )}
           </header>
         )}
         {children}
