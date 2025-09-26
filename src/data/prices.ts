@@ -9,25 +9,25 @@ export const PRICES: PriceRow[] = [
   // Pilates (principal)
   {
     treatment: "Pilates - 4 clases",
-    duration: "-",
+    duration: `60'`,
     price: 46800,
     note: "Pilates",
   },
   {
     treatment: "Pilates - 8 clases",
-    duration: "-",
+    duration: `60'`,
     price: 55900,
     note: "Pilates",
   },
   {
     treatment: "Pilates - 12 clases",
-    duration: "-",
+    duration: `60'`,
     price: 59900,
     note: "Pilates",
   },
   {
     treatment: "Pilates - 20 clases",
-    duration: "-",
+    duration: `60'`,
     price: 65800,
     note: "Pilates",
   },
@@ -68,19 +68,19 @@ export const PRICES: PriceRow[] = [
   },
   {
     treatment: "Maderoterapia 8 sesiones",
-    duration: "-",
+    duration: `50'`,
     price: 260900,
     note: "Estética Corporal",
   },
   {
     treatment: "Drenaje Linfático",
-    duration: "-",
+    duration: `50'`,
     price: 37800,
     note: "Estética Corporal",
   },
   {
     treatment: "Masaje Descontracturante",
-    duration: "-",
+    duration: `50'`,
     price: 32500,
     note: "Estética Corporal",
   },
@@ -89,13 +89,13 @@ export const PRICES: PriceRow[] = [
   {
     treatment:
       "4 sesiones corporal + 4 sesiones maderoterapia + 2 sesiones vela slim",
-    duration: "-",
+    duration: `50'`,
     price: 389200,
     note: "Combos",
   },
   {
     treatment: "Vela slim 1 sesión 2 zonas",
-    duration: "-",
+    duration: `50'`,
     price: 45800,
     note: "Combos",
   },
@@ -103,13 +103,13 @@ export const PRICES: PriceRow[] = [
   // Depilación Definitiva
   {
     treatment: "Piernas completas + cavado + axilas + tiro de cola",
-    duration: "-",
+    duration: `50'`,
     price: 39200,
     note: "Definitiva",
   },
   {
     treatment: "Media Pierna + cavado + axilas",
-    duration: "-",
+    duration: `50'`,
     price: 33580,
     note: "Definitiva",
   },
@@ -155,7 +155,7 @@ export const PRICES: PriceRow[] = [
     treatment: "Perfilado de Cejas",
     duration: "-",
     price: 19800,
-    note: "Cejas y Pestañas · Por confirmar",
+    note: "Cejas y Pestañas",
   },
   {
     treatment: "Perfilado + laminado de cejas",

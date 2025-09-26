@@ -20,9 +20,9 @@ export default function Section({
         {(title || subtitle) && (
           <header className="mb-10 text-center">
             {subtitle && (
-              <p className="text-sm uppercase tracking-wide text-brand-600">
+              <h3 className="text-sm uppercase tracking-wide text-brand-600">
                 {subtitle}
-              </p>
+              </h3>
             )}
             {title && (
               <h2 className="mt-2 text-3xl md:text-4xl font-semibold">

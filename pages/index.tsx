@@ -55,26 +55,28 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <Section className="pt-10 md:pt-16">
-        <div className="container-nice grid md:grid-cols-2 gap-10 items-center">
+      <Section className="pt-6 md:pt-16">
+        <div className="container-nice grid md:grid-cols-2 gap-6 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Centro de Estética y Pilates en Córdoba{" "}
-              <span className="text-brand-600">BELL&CO</span>
+            <span className="text-brand-600 text-2xl md:text-5xl font-semibold leading-tight">
+              BELL&CO
+            </span>
+            <h1 className="text-2xl md:text-5xl font-semibold leading-tight">
+              Centro de Estética y Pilates
             </h1>
             <p className="mt-4 text-gray-600 max-w-prose">
               Especialistas en tratamientos faciales, estética corporal,
               depilación definitiva, manicura, pedicura, uñas esculpidas y
               pilates. Atención personalizada en Córdoba, Argentina.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-4 flex gap-3">
               <a
                 className="btn-primary"
                 href={waHref}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Consultar por WhatsApp
+                Contactar
               </a>
               <Link className="btn-outline" href="/prices">
                 Ver precios
@@ -94,8 +96,8 @@ export default function Home() {
       {/* Servicios */}
       <Section
         id="servicios"
-        subtitle="Nuestros Servicios"
-        title="Tratamientos de Estética y Pilates"
+        title="Nuestros Servicios"
+        subtitle="Tratamientos de Estética y Pilates"
       >
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TREATMENTS.map((t) => (
@@ -107,13 +109,17 @@ export default function Home() {
                   <span>{t.category}</span>
                   {t.durationMin && <span>{t.durationMin} min</span>}
                 </div>
-                <div className="mt-4 flex items-center justify-between">
+                <div className="mt-4 flex items-center">
                   {typeof t.fromPrice === "number" && (
                     <span className="text-brand-600 font-medium">
                       Desde ${t.fromPrice.toLocaleString("es-AR")}
                     </span>
                   )}
-                  <a className="btn-outline" href={waHref} target="_blank">
+                  <a
+                    className="btn-outline ml-auto"
+                    href={waHref}
+                    target="_blank"
+                  >
                     Consultar
                   </a>
                 </div>
