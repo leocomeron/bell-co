@@ -18,7 +18,7 @@ export type Treatment = {
 };
 
 export const TREATMENTS: Treatment[] = [
-  // Pilates
+  // TOP SERVICES
   {
     id: "pilates",
     name: "Pilates",
@@ -34,6 +34,19 @@ export const TREATMENTS: Treatment[] = [
     description:
       "Tecnología de última generación para una piel suave por más tiempo.",
     fromPrice: 12000,
+  },
+  {
+    id: "manicura-semipermanente",
+    name: "Manicura Semipermanente",
+    category: "Manos y Pies",
+    durationMin: 60,
+    description: "Esmaltado duradero con terminación profesional.",
+  },
+  {
+    id: "maderoterapia-8-sesiones",
+    name: "Maderoterapia 8 sesiones",
+    category: "Estética Corporal",
+    description: "Técnica con elementos de madera para modelar y drenar.",
   },
   {
     id: "limpieza-profunda",
@@ -102,13 +115,7 @@ export const TREATMENTS: Treatment[] = [
     fromPrice: 15000,
   },
   // Manos y Pies
-  {
-    id: "manicura-semipermanente",
-    name: "Manicura Semipermanente",
-    category: "Manos y Pies",
-    durationMin: 60,
-    description: "Esmaltado duradero con terminación profesional.",
-  },
+
   {
     id: "pedicura-semipermanente",
     name: "Pedicura Semipermanente",
@@ -139,12 +146,7 @@ export const TREATMENTS: Treatment[] = [
     description:
       "Plan integral personalizado orientado a objetivos corporales.",
   },
-  {
-    id: "maderoterapia-8-sesiones",
-    name: "Maderoterapia 8 sesiones",
-    category: "Estética Corporal",
-    description: "Técnica con elementos de madera para modelar y drenar.",
-  },
+
   {
     id: "drenaje-linfatico",
     name: "Drenaje Linfático",

@@ -1,10 +1,18 @@
 import Link from "next/link";
 import Section from "components/Section";
 import { SITE } from "@/config/site";
-import { PRICES } from "@/data/prices";
+import type { PriceRow } from "@/data/prices";
 import PriceTable from "components/PriceTable";
+import { fetchPricesFromSheet } from "@/lib/prices";
 
-export default function Prices() {
+type PricesPageProps = { rows: PriceRow[] };
+
+export async function getServerSideProps() {
+  const rows = await fetchPricesFromSheet({ url: process.env.SHEETS_TSV_URL });
+  return { props: { rows } };
+}
+
+export default function Prices({ rows }: PricesPageProps) {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
       {/* Hero */}
@@ -38,7 +46,7 @@ export default function Prices() {
       {/* Precios */}
       <Section className="pb-16">
         <div className="container-nice">
-          <PriceTable rows={PRICES} />
+          <PriceTable rows={rows} />
           <p className="mt-6 text-sm text-gray-500 text-center">
             Los valores son estimativos y pueden variar según evaluación.
             Consultá combos y abonos por WhatsApp.
