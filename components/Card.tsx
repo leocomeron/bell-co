@@ -19,7 +19,7 @@ const Card = ({ treatment }: { treatment: Treatment }) => {
           <a
             className="btn-outline ml-auto"
             href={`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-              "Hola, quiero info sobre " + treatment.name + " en Bellco"
+              "Hola, quiero info sobre " + treatment.name + " en Bell&co"
             )}`}
             target="_blank"
           >

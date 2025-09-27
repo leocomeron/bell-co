@@ -9,10 +9,6 @@ import Footer from "components/Footer";
 import WhatsAppFloating from "components/WhatsAppFloating";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-    SITE.whatsappPrefill
-  )}`;
-
   return (
     <>
       <DefaultSeo
@@ -38,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="ICBM" content="-31.4201, -64.1888" />
       </Head>
       <StructuredData />
-      <Header waHref={waHref} />
+      <Header waHref={SITE.waHref} />
       <Component {...pageProps} />
       <Footer />
       <WhatsAppFloating />

@@ -5,7 +5,8 @@ export const SITE = {
   neighborhood: "Nuevo Urca",
   phoneDisplay: "351-5956913",
   whatsapp: "543515956913",
-  whatsappPrefill: "¡Hola! Quiero info sobre un tratamiento 💆‍♀️",
+  whatsappPrefill: "¡Hola! Quiero info sobre Bell&co 💆‍♀️",
+  waHref: "https://wa.me/543515956913?text=¡Hola! Quiero info sobre Bell&co 💆‍♀️",
   mapsUrl: "https://maps.app.goo.gl/zCFtsCR3Fncz4CJ97",
   description:
     "Centro de estética y pilates en Córdoba. Tratamientos faciales, corporales, depilación definitiva, manicura, pedicura, uñas y pilates. Atención profesional y personalizada.",

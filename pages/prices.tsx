@@ -5,10 +5,6 @@ import { PRICES } from "@/data/prices";
 import PriceTable from "components/PriceTable";
 
 export default function Prices() {
-  const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-    SITE.whatsappPrefill
-  )}`;
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
       {/* Hero */}
@@ -26,7 +22,7 @@ export default function Prices() {
           <div className="mt-6 flex gap-3 justify-center">
             <a
               className="btn-primary"
-              href={waHref}
+              href={SITE.waHref}
               target="_blank"
               rel="noopener noreferrer"
             >

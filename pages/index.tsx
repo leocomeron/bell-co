@@ -6,9 +6,6 @@ import Hero from "components/Hero";
 import Card from "components/Card";
 
 export default function Home() {
-  const waHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-    SITE.whatsappPrefill
-  )}`;
   const [initialCount, setInitialCount] = useState(4);
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -37,7 +34,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-white to-rose-50/30">
       {/* Hero */}
       <Section className="pt-6 md:pt-16">
-        <Hero waHref={waHref} />
+        <Hero waHref={SITE.waHref} />
       </Section>
 
       {/* Servicios */}
@@ -78,7 +75,7 @@ export default function Home() {
             <p className="text-gray-600">{SITE.city}</p>
             <p className="text-gray-600">{SITE.address}</p>
             <div className="mt-4 flex gap-3">
-              <a className="btn-primary" href={waHref} target="_blank">
+              <a className="btn-primary" href={SITE.waHref} target="_blank">
                 Contactar
               </a>
               <a

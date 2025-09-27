@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Carousel from "./Carousel";
-import { SITE } from "@/config/site";
 
 const Hero = ({ waHref }: { waHref: string }) => {
   const heroSlides = [
@@ -15,6 +14,10 @@ const Hero = ({ waHref }: { waHref: string }) => {
     {
       src: "/manicure.jpg",
       alt: "Manicura",
+    },
+    {
+      src: "/madero.png",
+      alt: "Maderoterapia",
     },
   ];
   return (
