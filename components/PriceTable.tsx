@@ -11,7 +11,10 @@ export default function PriceTable({ rows }: { rows: PriceRow[] }) {
               Tratamiento
             </th>
             <th className="px-6 py-3 text-right text-xs font-medium text-gray-700 uppercase tracking-wider">
-              Precio
+              Precio<br />
+              <span className="text-gray-500 lowercase">
+                (Descuentos en efectivo)
+              </span>
             </th>
             <th className="sm:table-cell px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
               Duración

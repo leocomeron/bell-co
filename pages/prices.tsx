@@ -48,6 +48,8 @@ export default function Prices({ rows }: PricesPageProps) {
         <div className="container-nice">
           <PriceTable rows={rows} />
           <p className="mt-6 text-sm text-gray-500 text-center">
+            Descuentos en efectivo.
+            <br />
             Los valores son estimativos y pueden variar según evaluación.
             Consultá combos y abonos por WhatsApp.
           </p>
